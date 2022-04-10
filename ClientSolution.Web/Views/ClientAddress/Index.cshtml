@@ -1,0 +1,61 @@
+﻿@model IEnumerable<ClientSolution.Web.ViewModels.AddressVM>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.AddressId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.addressType)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.StreetName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Town)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.province)
+            </th>
+
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.AddressId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.addressType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.StreetName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Town)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.province)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.AddressId  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.AddressId }) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.AddressId })
+                
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

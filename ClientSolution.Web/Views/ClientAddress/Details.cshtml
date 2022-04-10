@@ -1,0 +1,54 @@
+﻿@model ClientSolution.Web.ViewModels.AddressVM
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>AddressVM</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.AddressId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.AddressId)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.addressType)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.addressType)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.StreetName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.StreetName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Town)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Town)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.province)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.province)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.PersonId)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.PersonId)
+        </dd>
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AddressId}) |
+    <a asp-action="Index">Back to List</a>
+</div>
